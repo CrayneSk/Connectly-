@@ -3501,5 +3501,27 @@ if (typeof module !== 'undefined' && module.exports) {
         generateReferralCode,
         formatTimeAgo,
         formatMessageDate
+
+// TEMPORARY TEST - REMOVE AFTER TESTING
+setTimeout(() => {
+    console.log('🧪 TESTING BUTTONS...');
+    const loginBtn = document.getElementById('loginFormElem');
+    const loginEmail = document.getElementById('loginEmail');
+    const loginPassword = document.getElementById('loginPassword');
+    const signupLink = document.getElementById('goToSignupLink');
+    
+    console.log('Login Form:', loginBtn ? '✅ FOUND' : '❌ NOT FOUND');
+    console.log('Login Email:', loginEmail ? '✅ FOUND' : '❌ NOT FOUND');
+    console.log('Login Password:', loginPassword ? '✅ FOUND' : '❌ NOT FOUND');
+    console.log('Signup Link:', signupLink ? '✅ FOUND' : '❌ NOT FOUND');
+    
+    if (loginBtn) {
+        loginBtn.addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('✅ LOGIN FORM SUBMIT WORKS!');
+        });
+        console.log('✅ Test listener attached to login form');
+    }
+}, 2000);
     };
 }
